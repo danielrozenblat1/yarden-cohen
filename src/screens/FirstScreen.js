@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import lips from "../images/מחט.png";
+import lips from "../images/מיקרובליידינג.png";
 import styles from './FirstScreen.module.css';
 import PinkScrollButton from '../components/button/Button';
 import makeup from "../images/איפור.png"

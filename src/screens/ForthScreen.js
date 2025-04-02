@@ -39,7 +39,7 @@ const ForthScreen = () => {
           <p className={styles.frustrationText}>לבזבז כל כך הרבה זמן בבוקר על עיצוב ומילוי הגבות</p>
         </div>
       </div>
-      <div className={styles.titleSilver}>אחרי טיפול מיקרובליידינג את תוכלי</div>
+      <div className={styles.titleSilver}>אחרי טיפול המיקרובליידינג תוכלי</div>
       
       {/* Advantages Section */}
       <div className={styles.frustrationsRow}>
@@ -63,7 +63,7 @@ const ForthScreen = () => {
           <div className={styles.advantageIconContainer}>
             <Shield className={styles.frustrationIcon} strokeWidth={1} />
           </div>
-          <p className={styles.frustrationText}>להרגיש ביטחון במראה שלך עם תוצאות שנמשכות בין שנה לשלוש שנים (תלוי בסוג העור)</p>
+          <p className={styles.frustrationText}>להרגיש ביטחון לגבי המראה שלך עם תוצאות שמחזיקות עד כשנתיים וחצי (תלוי בסוג העור)</p>
         </div>
       </div>
       
