@@ -1,0 +1,114 @@
+/* MinimalComponent.module.css */
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  margin: 2% auto;
+  direction: rtl;
+}
+
+.item {
+  width: 350px;
+  height: 100px;
+  margin-bottom: 30px;
+  opacity: 1;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.itemRight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.itemLeft {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.number {
+  font-size: 5rem;
+  font-weight: 200;
+  color: transparent;
+  -webkit-text-stroke: 1px #d4a574;
+  text-stroke: 1px #d4a574;
+  font-family: 'Assistant', sans-serif;
+  letter-spacing: 2px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.text {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 16px;
+  color: #2c2c2c;
+  font-weight: 400;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.textLeft {
+  text-align: left;
+}
+
+/* Media Query for mobile screens */
+@media (max-width: 768px) {
+  .container {
+    max-width: 320px;
+    margin: 3% auto;
+  }
+  
+  .item {
+    width: 280px;
+    padding: 15px;
+  }
+  
+  .number {
+    font-size: 4rem;
+    min-width: 50px;
+  }
+  
+  .itemRight,
+  .itemLeft {
+    gap: 15px;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .container {
+    max-width: 320px;
+  }
+  
+  .item {
+    width: 300px;
+    padding: 12px;
+  }
+  
+  .number {
+    font-size: 3rem;
+    min-width: 45px;
+  }
+  
+  .text {
+    font-size: 14px;
+  }
+  
+  .itemRight,
+  .itemLeft {
+    gap: 12px;
+  }
+}

@@ -1,0 +1,208 @@
+/* Sides.module.css */
+.exampleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px; /* רווח גדול יותר בין אלמנטים */
+  width: 100%;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 400px; /* רוחב קבוע */
+  max-width: 90%; /* הגבלה באחוזים למסכים קטנים */
+  height: 70px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 24px auto; /* רווח גדול יותר בין אלמנטים */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 237, 222, 0.122);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.iconPill {
+  padding: 0;
+  width: 70px;
+  min-width: 70px;
+  background-color: rgba(255, 242, 230, 0.558);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textPill {
+  flex: 1;
+  padding: 0 20px;
+  background-color: rgba(251, 225, 202, 0.4);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* When icon is on the left */
+.leftIcon .iconPill {
+  border-radius: 20px 0 0 20px;
+}
+
+.leftIcon .textPill {
+  border-radius: 0 20px 20px 0;
+}
+
+/* When icon is on the right */
+.rightIcon .iconPill {
+  border-radius: 0 20px 20px 0;
+}
+
+.rightIcon .textPill {
+  border-radius: 20px 0 0 20px;
+}
+
+.image {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.text {
+  color: rgb(23, 23, 23);
+  text-align: right;
+  font-family: "AssistantR", Arial, sans-serif;
+  font-size: 18px;
+  direction: rtl;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* מתחת ל-350px */
+@media (max-width: 350px) {
+  .exampleContainer {
+    gap: 24px; /* רווח גדול יותר בין אלמנטים */
+  }
+  
+  .container {
+    margin: 20px auto;
+  }
+  
+  .text {
+    font-size: 15px; /* טקסט קטן יותר במסכים קטנים */
+  }
+}
+
+/* 350px-450px */
+@media (min-width: 351px) and (max-width: 450px) {
+  .exampleContainer {
+    gap: 26px;
+  }
+  
+  .container {
+    margin: 22px auto;
+  }
+  
+  .text {
+    font-size: 16px; /* טקסט קטן יותר במסכים קטנים */
+  }
+}
+
+/* 450px-550px */
+@media (min-width: 451px) and (max-width: 550px) {
+  .exampleContainer {
+    gap: 28px;
+  }
+  
+  .container {
+    margin: 24px auto;
+  }
+  
+  .text {
+    font-size: 17px;
+  }
+}
+
+/* 550px-650px */
+@media (min-width: 551px) and (max-width: 650px) {
+  .exampleContainer {
+    gap: 30px;
+  }
+  
+  .container {
+    margin: 26px auto;
+  }
+}
+
+/* 650px-750px */
+@media (min-width: 651px) and (max-width: 750px) {
+  .exampleContainer {
+    gap: 32px;
+  }
+  
+  .container {
+    margin: 28px auto;
+  }
+}
+
+/* 750px-850px */
+@media (min-width: 751px) and (max-width: 850px) {
+  .exampleContainer {
+    gap: 34px;
+  }
+  
+  .container {
+    margin: 30px auto;
+  }
+}
+
+/* 850px-950px */
+@media (min-width: 851px) and (max-width: 950px) {
+  .exampleContainer {
+    gap: 24px;
+  }
+  
+  .container {
+    margin: 22px auto;
+  }
+}
+
+/* 950px-1050px */
+@media (min-width: 951px) and (max-width: 1050px) {
+  .exampleContainer {
+    gap: 26px;
+  }
+  
+  .container {
+    margin: 24px auto;
+  }
+}
+
+/* 1050px-1150px */
+@media (min-width: 1051px) and (max-width: 1150px) {
+  .exampleContainer {
+    gap: 28px;
+  }
+  
+  .container {
+    margin: 26px auto;
+  }
+}
+
+/* 1150px-1250px */
+@media (min-width: 1151px) and (max-width: 1250px) {
+  .exampleContainer {
+    gap: 30px;
+  }
+  
+  .container {
+    margin: 28px auto;
+  }
+}
+
+/* מעל 1250px */

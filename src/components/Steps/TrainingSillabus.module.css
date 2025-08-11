@@ -1,0 +1,131 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  direction: rtl;
+  padding: 3rem 2rem;
+}
+
+.stagesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.stage {
+  position: relative;
+  padding: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.stage:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stageNumber {
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  font-family: 'Assistant', sans-serif;
+  font-size: 8rem;
+  font-weight: 700;
+  color: rgba(180, 140, 125, 0.25); /* גוון בז' ורדרד רך ושקוף יותר */
+  line-height: 1;
+  transform: rotate(5deg);
+  text-shadow: 
+    2px 2px 3px rgba(255, 255, 255, 0.3),
+    -2px -2px 3px rgba(120, 95, 85, 0.1);
+  -webkit-text-stroke: 1px rgba(150, 120, 110, 0.15); /* קו מתאר דק יותר ורך יותר */
+}
+
+.stageContent {
+  position: relative;
+  z-index: 1;
+}
+
+.stageTitle {
+  font-family: 'Assistant', sans-serif;
+  color: #553b30; /* חום כהה עם ניגודיות לרקע */
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+}
+
+.stageDescription {
+  font-family: 'AssistantR', sans-serif;
+  color: #6d4c3d; /* חום בינוני עם ניגודיות מתאימה */
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* גוונים מעודכנים בהתאם לגרדיאנט */
+.stage1::before { background-color: #DCB1A2; } /* בז' ורדרד */
+.stage2::before { background-color: #E5CAC0; } /* בז' אפרסק בהיר */
+.stage3::before { background-color: #e2bdae; } /* בז' ורדרד */
+.stage4::before { background-color: #C19A8C; } /* בז' עמוק */
+
+@media (max-width: 550px) {
+  .container {
+    max-width: 450px;
+  }
+  .stageNumber {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    max-width: 350px;
+  }
+  .stage {
+    padding: 1.2rem;
+  }
+  .stageNumber {
+    font-size: 4rem;
+  }
+  .stageTitle {
+    font-size: 1.2rem;
+  }
+  .stageDescription {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .container {
+    max-width: 300px;
+    padding: 1.5rem 0.5rem;
+  }
+  .stage {
+    padding: 1rem;
+  }
+  .stageNumber {
+    font-size: 3.5rem;
+    top: -10px;
+    right: -5px;
+  }
+  .stageTitle {
+    font-size: 1.1rem;
+  }
+  .stageDescription {
+    font-size: 0.9rem;
+  }
+}

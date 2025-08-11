@@ -1,0 +1,432 @@
+.syllabusContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 20px;
+  font-family: 'AssistantR';
+  direction: rtl;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: rgba(245, 240, 235, 0.25);
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  border-radius: 20px;
+  border: 1px solid rgba(160, 130, 100, 0.15);
+  box-shadow: 
+    0 8px 32px rgba(160, 130, 100, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 248, 240, 0.1) 0%, rgba(245, 222, 179, 0.05) 100%);
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #9d7c5c;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(157, 124, 92, 0.15);
+  position: relative;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #b5956f;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  position: relative;
+}
+
+.courseInfo {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.courseInfo span {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 227, 199, 0.8);
+  backdrop-filter: blur(15px) saturate(150%);
+  -webkit-backdrop-filter: blur(15px) saturate(150%);
+  color: #633a26;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 16px rgba(157, 124, 92, 0.2);
+}
+
+.expandButtonContainer {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.expandButton {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.2rem 2.5rem;
+  background: rgba(245, 240, 235, 0.2);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 2px solid rgba(181, 149, 111, 0.2);
+  border-radius: 50px;
+  color: #9d7c5c;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 8px 25px rgba(157, 124, 92, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
+  font-family: 'AssistantR', Arial, sans-serif;
+  position: relative;
+}
+
+.expandButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(245, 222, 179, 0.05) 100%);
+  border-radius: 50px;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.expandButton:hover {
+  background: rgba(245, 240, 235, 0.3);
+  border-color: rgba(181, 149, 111, 0.3);
+  color: #8b6f4f;
+  transform: translateY(-2px);
+  box-shadow: 
+    0 12px 35px rgba(157, 124, 92, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.expandButton:hover::before {
+  opacity: 1.2;
+}
+
+.expandButton:active {
+  transform: translateY(0);
+  box-shadow: 
+    0 6px 20px rgba(157, 124, 92, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.expandIcon {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.3s ease;
+}
+
+.expandButton:hover .expandIcon {
+  transform: scale(1.1);
+}
+
+.sessionsContainer {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sessionCard {
+  background: rgba(250, 248, 245, 0.3);
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(181, 149, 111, 0.15);
+  box-shadow: 
+    0 8px 32px rgba(157, 124, 92, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 1px 3px rgba(0, 0, 0, 0.05),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.sessionCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 248, 240, 0.1) 0%, rgba(245, 222, 179, 0.03) 100%);
+  border-radius: 20px;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.sessionCard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 248, 220, 0.5), transparent);
+}
+
+.sessionCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 16px 45px rgba(157, 124, 92, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 2px 8px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.15);
+  border-color: rgba(181, 149, 111, 0.25);
+  background: rgba(250, 248, 245, 0.4);
+}
+
+.sessionCard:hover::before {
+  opacity: 1.3;
+}
+
+.sessionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.sessionNumber {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #9d7c5c;
+  padding: 0.5rem 1rem;
+  background: rgba(250, 248, 245, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(181, 149, 111, 0.2);
+  box-shadow: 0 2px 8px rgba(157, 124, 92, 0.1);
+}
+
+.iconContainer {
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #b5956f 0%, #9d7c5c 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 4px 12px rgba(157, 124, 92, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.iconContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.sessionIcon {
+  width: 24px;
+  height: 24px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.sessionTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #9d7c5c;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.quoteContainer {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: rgba(181, 149, 111, 0.12);
+  backdrop-filter: blur(15px) saturate(120%);
+  -webkit-backdrop-filter: blur(15px) saturate(120%);
+  border-radius: 15px;
+  border-right: 4px solid rgba(181, 149, 111, 0.4);
+  box-shadow: 
+    0 2px 8px rgba(181, 149, 111, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+.quoteContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(245, 222, 179, 0.02) 100%);
+  border-radius: 15px;
+  pointer-events: none;
+}
+
+.sessionQuote {
+  font-style: italic;
+  color: #9d7c5c;
+  font-size: 1rem;
+  margin: 0;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
+}
+
+.contentContainer {
+  margin-top: 1.5rem;
+}
+
+.contentItem {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  padding: 0.3rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.contentIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  margin-top: 0.1rem;
+}
+
+.contentIcon {
+  width: 16px;
+  height: 16px;
+  color: #9d7c5c;
+  transition: all 0.2s ease;
+}
+
+.contentText {
+  color: #9d7c5c;
+  flex: 1;
+  transition: all 0.2s ease;
+}
+
+.contentItem:hover .contentIcon {
+  color: #b5956f;
+  transform: scale(1.1);
+}
+
+.contentItem:hover .contentText {
+  color: #b5956f;
+}
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+  .syllabusContainer {
+    padding:0 1rem;
+  }
+  
+  .sessionsContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .mainTitle {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .courseInfo {
+    gap: 1rem;
+  }
+  
+  .courseInfo span {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .sessionCard {
+    padding: 1.5rem;
+  }
+  
+  .expandButton {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .expandIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sessionHeader {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    text-align: right;
+  }
+  
+  .courseInfo {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .expandButton {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.95rem;
+    gap: 0.6rem;
+  }
+  
+  .expandIcon {
+    width: 18px;
+    height: 18px;
+  }
+}
