@@ -9,6 +9,7 @@ import Timeline from './components/timeline/Steps';
 import FifthScreen from './screens/FifthScreen';
 import ByMe from './components/ByMe/ByMe';
 import LearnFirstScreen from './screens/LearnFirstScreen';
+import PrivacyPolicy from './components/privacy/Privacy';
 
 function App() {
   return <>
@@ -18,7 +19,13 @@ function App() {
   <AboutMe/>
   <ThirdScreen/>
   {/* <ForthScreen/> */}
-
+<PrivacyPolicy 
+  ownerName="ירדן כהן" 
+  email="yarden6860@gmail.com" 
+  phone="+972 50-444-8596" 
+  domain="yardencohen.co.il" 
+/>
+<ByMe/>
   </>
 }
 
